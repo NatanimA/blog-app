@@ -10,15 +10,10 @@ class User < ApplicationRecord
   scope :find_posts_amount, ->(id) { select(:posts_counter).where(id:) }
 
 
-  # This method will take the authors Id as parameter and
-  # It will increment the posts_counter by 1.
-  def self.update_posts_counter(id)
-    count = User.find_posts_amount(id).map(&:posts_counter)
-    count = if count[0].nil?
-              0 + 1
-            else
-              count[0] + 1
-            end
+  # This method will take the authors Id as parameter, and updated count value
+  # It will increment the posts_counter by the given count value the.
+  def self.update_posts_counter(id,posts_counter)
+    count = posts_counter
     User.where(id:).update(posts_counter: count)
   end
 

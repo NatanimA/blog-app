@@ -6,5 +6,5 @@ class Comment < ApplicationRecord
   scope :recent_posts_comment, ->(post) { where(post:).order(created_at: 'DESC').first(5) }
 
   # A method that updates the comments counter for a post.
-  scope :update_comments_counter, ->(post) { Post.update_comments_counter(post) }
+  scope :update_comments_counter, ->(post,counter) { Post.update_comments_counter(post,counter) }
 end
