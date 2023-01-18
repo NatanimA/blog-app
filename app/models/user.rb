@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   # This method will take the authors Id as parameter, and updated count value
   # It will increment the posts_counter by the given count value the.
-  def self.update_posts_counter(id,posts_counter)
+  def self.update_posts_counter(id, posts_counter)
     count = posts_counter
     User.where(id:).update(posts_counter: count)
   end

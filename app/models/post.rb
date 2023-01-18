@@ -11,14 +11,14 @@ class Post < ApplicationRecord
   scope :find_likes_amount, ->(id) { select(:likes_counter).where(id:) }
 
   # This method will update the amount of likes for a give post id.
-  def self.update_likes_counter(id,likes_counter)
+  def self.update_likes_counter(id, likes_counter)
     count = likes_counter
     Post.where(id:).update(likes_counter: count)
   end
 
   # This method will take the Post Id as parameter and updated count value
   # It will increment the comments_counter by the given count value.
-  def self.update_comments_counter(id,comments_counter)
+  def self.update_comments_counter(id, comments_counter)
     count = comments_counter
     Post.where(id:).update(comments_counter: count)
   end
@@ -27,7 +27,7 @@ class Post < ApplicationRecord
   scope :posts_by_author_id, ->(author) { where(author:).order(created_at: 'DESC').first(3) }
 
   # Here It will call the method update_posts_counter that recides in the User Model.
-  scope :update_posts_counter, ->(author,counter) { User.update_posts_counter(author,counter) }
+  scope :update_posts_counter, ->(author, counter) { User.update_posts_counter(author, counter) }
 
   # Here we can call the method which recides in comments to find the 5 recent commnets for a post.
   scope :recent_posts_comment, ->(post) { Comment.recent_posts_comment(post) }
