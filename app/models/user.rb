@@ -1,9 +1,8 @@
 class User < ApplicationRecord
-  has_many :comments
-  has_many :posts, through: :comments
-  has_many :posts
-  has_many :likes
-  has_many :posts, through: :likes
+  has_many :comments, foreign_key: 'author_id'
+  has_many :posts, foreign_key: 'author_id'
+  has_many :likes, foreign_key: 'author_id'
+
 
   # This scope will find the amout of posts the user have and
   # it will try to reterive the informations by given author ID.
