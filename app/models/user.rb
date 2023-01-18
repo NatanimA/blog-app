@@ -3,7 +3,6 @@ class User < ApplicationRecord
   has_many :posts, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
-
   # This scope will find the amout of posts the user have and
   # it will try to reterive the informations by given author ID.
   scope :find_posts_amount, ->(id) { select(:posts_counter).where(id:) }
