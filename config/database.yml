@@ -62,9 +62,9 @@ development:
 test:
   <<: *default
   database: blog_app_test
-  port: #port number default is 5432
-  username: #your username
-  password: #your password
+  #port: #port number default is 5432
+  #username: #your username
+  #password: #your password
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
