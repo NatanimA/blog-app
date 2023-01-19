@@ -6,9 +6,6 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 1, maximum: 20 }
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }, numericality: { only_integer: true }
 
-
-
-
   # This scope will find the amout of posts the user have and
   # it will try to reterive the informations by given author ID.
   scope :find_posts_amount, ->(id) { select(:posts_counter).where(id:) }

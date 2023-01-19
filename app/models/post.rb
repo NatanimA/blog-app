@@ -7,7 +7,6 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
-
   # Ths scope will find the amount of comments for post
   # it will try to reterive the informations by given Post ID.
   scope :find_comments_amount, ->(id) { select(:comments_counter).where(id:) }
