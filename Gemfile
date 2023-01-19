@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-#Rspec for unit testings
+# Rspec for unit testings
 gem 'rspec-rails', '~> 4.0.0.beta2'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -74,5 +74,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-
