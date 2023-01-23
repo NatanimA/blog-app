@@ -1,2 +1,2 @@
-class LikesController <ApplicationController
+class LikesController < ApplicationController
 end
