@@ -11,6 +11,6 @@ class CommentsController < ApplicationController
   end
 
   def new
-    render "new"
+    render 'new'
   end
 end
