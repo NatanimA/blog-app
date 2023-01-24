@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
+# Rails controller testing to render templates
+gem 'rails-controller-testing'
+
 # Rspec for unit testings
 gem 'rspec-rails', '~> 4.0.0.beta2'
 
