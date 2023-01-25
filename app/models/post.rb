@@ -35,6 +35,6 @@ class Post < ApplicationRecord
 
   # Here we can call the method which recides in comments to find the 5 recent commnets for a post.
   def recent_posts_comment
-    comments.order(created_at: "DESC").limit(5)
+    comments.order(created_at: 'DESC').limit(5)
   end
 end

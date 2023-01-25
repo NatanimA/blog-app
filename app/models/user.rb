@@ -19,6 +19,6 @@ class User < ApplicationRecord
 
   # Here we can get posts that belongs to each user by just passing the ID of the author
   def recent_posts
-    self.posts.order(created_at: 'DESC').first(3)
+    posts.order(created_at: 'DESC').first(3)
   end
 end
