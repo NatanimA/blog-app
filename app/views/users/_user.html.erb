@@ -1,3 +1,4 @@
+<%= link_to user_path(user.id) do %>
 <div class="user-list-container">
     <div class="user-image-container">
          <image class="user-photo" src="<%= user.photo %>"></image>
@@ -7,3 +8,4 @@
         <span class="num-posts">Number of posts: <%= user.posts_counter %></span>
     </div>
 </div>
+<% end %>

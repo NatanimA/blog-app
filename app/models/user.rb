@@ -18,5 +18,7 @@ class User < ApplicationRecord
   end
 
   # Here we can get posts that belongs to each user by just passing the ID of the author
-  scope :recent_posts, ->(id) { Post.posts_by_author_id(id) }
+  def recent_posts
+    self.posts.order(created_at: 'DESC').first(3)
+  end
 end

@@ -34,5 +34,7 @@ class Post < ApplicationRecord
   scope :update_posts_counter, ->(author, counter) { User.update_posts_counter(author, counter) }
 
   # Here we can call the method which recides in comments to find the 5 recent commnets for a post.
-  scope :recent_posts_comment, ->(post) { Comment.recent_posts_comment(post) }
+  def recent_posts_comment
+    comments.order(created_at: "DESC").limit(5)
+  end
 end

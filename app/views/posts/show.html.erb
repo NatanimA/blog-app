@@ -13,7 +13,11 @@
     <%= @post.text %>
     </p>
 </article>
-<% if @post.comments.length != 0 %>
+<% if @post.comments.length == 0 %>
+<div class="comments-container">
+    <h4>No comments</h4>
+</div>
+<% else %>
 <div class="comments-container">
     <%= render @post.comments %>
 </div>

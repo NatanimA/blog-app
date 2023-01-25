@@ -1,15 +1,17 @@
 
-<%= render @post[0].author %>
+<%= render @user %>
 
 <div class="user-detail-bio">
     <h4>Bio</h4>
     <p class="user-bio-content">
-        <%= @post[0].author.bio %>
+        <%= @user.bio %>
     </p>
 </div>
 
-<%= render @post %>
+<%= render @posts %>
 <div class="btn-container-post">
+<%= link_to user_posts_path(@user.id) do %>
 <button class="btn-posts">See all Posts</button>
+<% end %>
 </div>
 

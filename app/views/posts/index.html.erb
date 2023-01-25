@@ -2,15 +2,23 @@
 
 <% @post.each do |post|%>
 <%= render post %>
-<% if post.comments.length != 0 %>
+<% if post.comments.length == 0 %>
 <div class="comments-container">
-    <%= render post.comments %>
+    <h4>No comments</h4>
+</div>
+<% else %>
+<div class="comments-container">
+    <% post.recent_posts_comment.each do |comment|%>
+    <%= render comment %>
+    <% end %>
 </div>
 <% end %>
 <% end %>
 
 <div class="btn-container-post">
+<%= link_to user_path(@post[0].author.id) do%>
 <button class="btn-posts">Pagination</button>
+<% end %>
 </div>
 
 

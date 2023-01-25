@@ -1,4 +1,5 @@
 
+<%= link_to user_post_path(post.author.id,post.id) do %>
 <div class="posts-list-container">
     <h4>Post #<%= post.id %> </h4>
     <p class="posts-content">
@@ -9,3 +10,4 @@
         <span class="likes-counter">Likes <%= post.likes_counter %></span>
     </div>
 </div>
+<% end %>
