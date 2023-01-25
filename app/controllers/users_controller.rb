@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def index
-    render 'index'
+    @user = User.all()
   end
 
   def show
-    render 'show'
+    @post = User.recent_posts(params[:id])
   end
 
   def edit
