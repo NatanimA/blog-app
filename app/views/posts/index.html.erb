@@ -1,5 +1,6 @@
 <%= render @post[0].author %>
 
+
 <% @post.each do |post|%>
 <%= render post %>
 <% if post.comments.length == 0 %>

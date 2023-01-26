@@ -1,3 +1,10 @@
+<% flash.each do |type, msg| %>
+  <% if type == "success" %>
+    <div class="success-notice">
+        <%= msg %>
+    </div>
+  <% end %>
+<% end %>
 <article class="posts-detail-container">
     <div class="post-info-container">
         <div class="post-info">

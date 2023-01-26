@@ -6,8 +6,8 @@
         <%= post.text %>
     </p>
     <div class="interaction-container">
-        <span class="comments-counter">Comments <%= post.comments_counter %></span>
-        <span class="likes-counter">Likes <%= post.likes_counter %></span>
+        <%= link_to "Add Comment: #{post.comments_counter }" , new_post_comment_path(post.id), class: 'counter counter-btn' %>
+        <%= button_to "Likes: #{post.likes_counter}", post_likes_path(post.id), method: :post, remote: true, class: 'counter counter-btn'  %>
     </div>
 </div>
 <% end %>
