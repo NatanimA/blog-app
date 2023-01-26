@@ -214,18 +214,18 @@ textarea {
 .error-notice {
   background-color: rgb(248, 0, 87);
   font-size: 20px;
-    color: darkslategray;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 10px 25px;
+  color: darkslategray;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 25px;
 }
+
 .counter {
   border: 1px solid silver;
   padding: 10px;
 }
-
 
 .counter-btn {
   background-color: #fff;
