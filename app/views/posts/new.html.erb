@@ -1,0 +1,24 @@
+<% flash.each do |type, msg| %>
+  <% if type == "error" %>
+    <div class="error-notice">
+        <%= msg %>
+    </div>
+  <% end %>
+<% end %>
+<div class="form-container">
+    <div class ="form-heading">
+        <h3>Add New Post</h3>
+    <div>
+    <%= form_with model: post,method: :post, url: user_posts_path(@user.id), scope: :new_post,local:true do |form| %>
+        <div>
+            <%= form.label :title%>:
+            <%= form.text_field :title %>
+        </div>
+        <div>
+            <%= form.label :text %>:
+            <br>
+            <%= form.text_area :text %>
+        </div>
+        <%= form.submit "Add Post", disable_with: 'Submiting...' %>
+    <% end %>
+<div>
