@@ -57,7 +57,6 @@ group :development, :test do
   # Database Cleaner
   gem 'database_cleaner'
 
-
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   gem 'webdrivers'
