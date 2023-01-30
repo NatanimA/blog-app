@@ -4,9 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 #Ruby
 ruby '3.1.3'
 
-#Bullet Gem
-gem 'bullet', group: 'development'
-
 # Rails controller testing to render templates
 gem 'rails-controller-testing'
 
@@ -16,6 +13,9 @@ gem 'rspec-rails', '~> 4.0.0.beta2'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
+
+#Bullet Gem
+gem 'bullet', group: 'development'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -53,6 +53,17 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+group :development, :test do
+  #Database Cleaner
+  gem "database_cleaner"
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'capybara'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  gem 'webdrivers'
+end
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -81,3 +92,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+
