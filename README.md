@@ -55,7 +55,6 @@ After you're finished please remove all the comments and instructions!
 
 > A Blog app where user add post in comment and interact with liking a post features, project is in progress.
 
-
 **Blog App**
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -93,8 +92,6 @@ After you're finished please remove all the comments and instructions!
 
 > Currently there are no features that have been inserted.
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -102,7 +99,6 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Project is in progress and not deployed yet
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +113,7 @@ After you're finished please remove all the comments and instructions!
 
 To get a local copy up and running, follow these steps.
 
-- git clone  https://github.com/NatanimA/blog-app.git
+- git clone https://github.com/NatanimA/blog-app.git
 
 ### Prerequisites
 
@@ -135,7 +131,7 @@ Example command:
 
 Clone this repository to your desired folder:
 
-- git clone  https://github.com/NatanimA/blog-app.git
+- git clone https://github.com/NatanimA/blog-app.git
 
 <!--
 Example commands:
@@ -172,12 +168,15 @@ Example command:
   rails server
 ```
 --->
+
 ```
 git clone  https://github.com/NatanimA/blog-app.git
 ```
+
 ### Run tests
 
 To run tests, run the following command:
+
 - No tests have been done so far
 
 <!--
@@ -208,12 +207,16 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-
 👤 **Natanim Abesha**
 
 - GitHub: [@githubhandle](https://github.com/NatanimA)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/natanim-abesha-04a39823a)
 
+👤 **Emre Karayaman**
+
+- GitHub: [@karayamanemre](https://github.com/karayamanemre)
+- Twitter: [@KarayamanEmre](https://twitter.com/KarayamanEmre)
+- LinkedIn: [Emre Karayaman](https://www.linkedin.com/in/emre-karayaman-a7b45b243/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -244,7 +247,6 @@ Feel free to check the [issues page](../../issues/).
 > I would like to thank Microverse for providing all the resources so that I can build this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
