@@ -218,6 +218,12 @@ Example:
 - Twitter: [@KarayamanEmre](https://twitter.com/KarayamanEmre)
 - LinkedIn: [Emre Karayaman](https://www.linkedin.com/in/emre-karayaman-a7b45b243/)
 
+👤 **Kenechuwkwu Agagwu**
+
+- GitHub: [kene-creator](https://github.com/kene-creator)
+- LinkedIn: [Kene Agagwu](https://www.linkedin.com/in/kenechukwu-agagwu)
+- Twitter: [Kene](https://twitter.com/kay_yung1)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
