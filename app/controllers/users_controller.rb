@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.recent_posts
+    @posts = Post.includes(:author).where(author: { id: params[:id]}).order(created_at:"DESC").first(3)
   end
 
   def edit
