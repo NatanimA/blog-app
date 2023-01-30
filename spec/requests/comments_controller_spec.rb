@@ -23,13 +23,15 @@ Rails.describe CommentsController, type: :request do
       @comment = Comment.new(text: 'Hello there!', post_id: 1, author_id: 1)
     end
     it 'Should make a successful request' do
-      post post_comments_path(:post_id => 2), :params => {:new_comment => {:text => 'Hello there!', :post_id => 1, :author_id => 1}}
+      post post_comments_path(post_id: 2),
+           params: { new_comment: { text: 'Hello there!', post_id: 1, author_id: 1 } }
       expect(response).to have_http_status(:found)
     end
 
     it 'Should match the reponse body' do
-      post post_comments_path(:post_id => 1), :params => {:new_comment => {:text => 'Hello there!', :post_id => 1, :author_id => 1}}
-       expect(response.content_type).to eq "text/html; charset=utf-8"
+      post post_comments_path(post_id: 1),
+           params: { new_comment: { text: 'Hello there!', post_id: 1, author_id: 1 } }
+      expect(response.content_type).to eq 'text/html; charset=utf-8'
     end
   end
 end
