@@ -1,13 +1,13 @@
 
-<%= link_to user_post_path(post.author.id,post.id) do %>
+<%= link_to user_post_path(post.author.id,post.id), class:'post-link-container',id:post.id do %>
 <div class="posts-list-container">
-    <h4>Post #<%= post.id %> </h4>
+    <h4 class="post-title-header"><%= post.title %> </h4>
     <p class="posts-content">
         <%= post.text %>
     </p>
     <div class="interaction-container">
         <%= link_to "Add Comment: #{post.comments_counter }" , new_post_comment_path(post.id), class: 'counter counter-btn' %>
-        <%= button_to "Likes: #{post.likes_counter}", post_likes_path(post.id), method: :post, remote: true, class: 'counter counter-btn'  %>
+        <%= button_to "Likes: #{post.likes_counter}", post_likes_path(post.id), method: :post, remote: true, class: 'counter counter-like-btn'  %>
     </div>
 </div>
 <% end %>
