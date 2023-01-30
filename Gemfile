@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-#Ruby
+# Ruby
 ruby '3.1.3'
 
 # Rails controller testing to render templates
@@ -14,7 +14,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
-#Bullet Gem
+# Bullet Gem
 gem 'bullet', group: 'development'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -54,10 +54,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 group :development, :test do
-  #Database Cleaner
-  gem "database_cleaner"
-  # Capybara, the library that allows us to interact with the browser using Ruby
-  gem 'capybara'
+  # Database Cleaner
+  gem 'database_cleaner'
+
 
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
@@ -90,7 +89,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
-
-

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @post = Post.includes(:author,comments: [:author]).where(author: {id: params[:user_id]})
+    @post = Post.includes(:author, comments: [:author]).where(author: { id: params[:user_id] })
   end
 
   def new
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:author, comments: [:author]).where(author: {id: params[:user_id]},id: params[:id]).first
-    #@post = Post.find_by(author: params[:user_id], id: params[:id])
+    @post = Post.includes(:author, comments: [:author]).where(author: { id: params[:user_id] }, id: params[:id]).first
+    # @post = Post.find_by(author: params[:user_id], id: params[:id])
   end
 end
