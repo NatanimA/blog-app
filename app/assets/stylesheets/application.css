@@ -233,3 +233,7 @@ textarea {
   width: fit-content;
   cursor: pointer;
 }
+
+.bg_black {
+  background-color: #121212;
+}
