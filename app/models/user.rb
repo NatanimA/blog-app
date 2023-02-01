@@ -5,11 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_many :comments, foreign_key: 'author_id', dependent: :destroy
-  has_many :posts, foreign_key: 'author_id' , dependent: :destroy
-  has_many :likes, foreign_key: 'author_id' , dependent: :destroy
+  has_many :posts, foreign_key: 'author_id', dependent: :destroy
+  has_many :likes, foreign_key: 'author_id', dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 1, maximum: 20 }
-  validates :posts_counter, presence: false, comparison: { greater_than_or_equal_to: 0 }, numericality: { only_integer: true }
+  validates :posts_counter, presence: false, comparison: { greater_than_or_equal_to: 0 },
+                            numericality: { only_integer: true }
 
   # This scope will find the amout of posts the user have and
   # it will try to reterive the informations by given author ID.
