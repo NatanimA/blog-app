@@ -1,3 +1,4 @@
+<div class="home-container">
 <% flash.each do |type, msg| %>
   <% if type == "success" %>
     <div class="success-notice">
@@ -25,5 +26,6 @@
 <%= link_to user_posts_path(@user.id) do %>
 <button class="btn-posts">See all Posts</button>
 <% end %>
+</div>
 </div>
 

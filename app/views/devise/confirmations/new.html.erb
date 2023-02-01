@@ -1,11 +1,14 @@
+<div class="confirmation-container">
+<p class="confirmation-instructions"> Please check your email first for confirmation</p>
+<span class="confirmation-instructions">If you have confirmed your email please go back</span>
+<%= link_to 'Sign in', new_user_session_path,class:'login-anchor' %>
+<div class="confirmation-form-container">
 <h2>Resend confirmation instructions</h2>
-
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
   </div>
 
   <div class="actions">
@@ -14,3 +17,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
