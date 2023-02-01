@@ -9,9 +9,10 @@
 <article class="posts-detail-container">
     <div class="post-info-container">
         <div class="post-info">
-        <h5>Post</h5><span class="post-title-header"><%= @post.title %></span>
+        <h5>Post</h5>
         <span>by <span><span class="poster-user-name"><%=  @post.author.name%></span>
         </div>
+        <span class="post-title-header"><%= @post.title %></span>
         <div class="interaction-container-detail">
             <span class="comments-counter">Comments: <%= @post.comments_counter %></span>
             <span class="likes-counter">Likes: <%= @post.likes_counter %></span>

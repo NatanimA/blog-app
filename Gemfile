@@ -4,8 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Ruby
 ruby '3.1.3'
 
-# Devise for Session and Authorization and authentication
+# Devise for Session and authentication
 gem 'devise'
+
+# CANCANCAN for authorization and Abilities
+gem 'cancancan'
 
 # Rails controller testing to render templates
 gem 'rails-controller-testing'

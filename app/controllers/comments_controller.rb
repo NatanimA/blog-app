@@ -42,4 +42,10 @@ class CommentsController < ApplicationController
       f.html { render 'new', locals: { comment: } }
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to root_path, status: :see_other
+  end
 end

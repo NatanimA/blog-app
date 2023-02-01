@@ -3,4 +3,7 @@
     <div class="comments-list-container">
         <span class="commenter-user-name">Username: <%= comment.author.name %></span>
         <p class="comments-content">Comment: <%= comment.text %></p>
+        <% if can? :delete, comment %>
+            <%= link_to 'Delete', post_comment_path(comment.post_id,comment.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?", turbo_confirm: "Are you sure?" },class: 'counter counter-btn' %>
+        <% end %>
     </div>

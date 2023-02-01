@@ -25,6 +25,12 @@
   </div>
 
   <div class="field">
+    <!-- in users/_form.html.erb -->
+    <%= f.label :role, "Role" %>
+    <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

@@ -35,6 +35,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.includes(:author, comments: [:author]).where(author: { id: params[:user_id] }, id: params[:id]).first
-    # @post = Post.find_by(author: params[:user_id], id: params[:id])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path, status: :see_other
   end
 end
