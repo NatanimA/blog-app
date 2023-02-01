@@ -1,3 +1,4 @@
+<div class="home-container">
 <% flash.each do |type, msg| %>
   <% if type == "error" %>
     <div class="error-notice">
@@ -22,3 +23,4 @@
         <%= form.submit "Add Post", disable_with: 'Submiting...' %>
     <% end %>
 <div>
+</div>

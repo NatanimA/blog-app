@@ -1,3 +1,4 @@
+<div class="home-container">
 <% flash.each do |type, msg| %>
   <% if type == "success" %>
     <div class="success-notice">
@@ -29,5 +30,6 @@
     <%= render @post.comments %>
 </div>
 <% end %>
+</div>
 
 

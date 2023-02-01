@@ -30,7 +30,7 @@ body {
   width: 20%;
   height: 150px;
   font-size: 80px;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 3px;
   text-align: center;
 }
@@ -38,7 +38,7 @@ body {
 .user-detail-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 6px;
   width: 70%;
 }
@@ -232,4 +232,118 @@ textarea {
   border: 1px solid silver;
   width: fit-content;
   cursor: pointer;
+}
+
+.login-section-container {
+  width: 60%;
+  height: 80vh;
+  margin: 60px auto;
+  border: 1px solid black;
+}
+
+.field-remember {
+  width: fit-content;
+  margin-left: 10%;
+}
+
+.login-section-container h2 {
+  text-align: center;
+}
+
+.field-login {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+.field-login input {
+  border: none;
+  height: 40px;
+  width: 100%;
+}
+
+.actions {
+  text-align: center;
+  padding: 10px;
+}
+
+.actions input {
+  padding: 10px;
+}
+
+.shared-links {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+#user_nav {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  top: 0%;
+  padding: 5px;
+  width: 98%;
+  border: 1px solid black;
+}
+
+.login-anchor {
+  color: blue;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.register-anchor {
+  color: green;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sign-up-container {
+  width: 60%;
+  height: 80vh;
+  margin: 60px auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.sign-up-container h2 {
+  text-align: center;
+}
+
+.confirmation-container {
+  width: 60%;
+  height: 80vh;
+  margin: 60px auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.confirmation-form-container {
+  width: 60%;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.confirmation-form-container input[type='email'] {
+  width: 100%;
+  padding: 20px;
+}
+
+.confirmation-instructions {
+  color: green;
+}
+
+.confirmation-show {
+  width: 60%;
+  height: 80vh;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.home-container {
+  margin: 60px auto;
 }
