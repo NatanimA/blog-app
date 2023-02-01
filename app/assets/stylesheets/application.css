@@ -30,7 +30,7 @@ body {
   width: 20%;
   height: 150px;
   font-size: 80px;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 3px;
   text-align: center;
 }
@@ -38,7 +38,7 @@ body {
 .user-detail-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 6px;
   width: 70%;
 }
