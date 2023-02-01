@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  #Authorization rules for cancancan
-  ROLES = %i[admin moderator author banned]
+  # Authorization rules for cancancan
+  ROLES = %i[admin moderator author banned].freeze
 
   has_many :comments, foreign_key: 'author_id', dependent: :destroy
   has_many :posts, foreign_key: 'author_id', dependent: :destroy
