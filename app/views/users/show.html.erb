@@ -15,9 +15,11 @@
         <%= @user.bio %>
     </p>
     <%= link_to new_user_post_path(@user.id) do %>
+    <% if @btn %>
     <div class="add-new-post">
         <button>Add New Post </button>
     </div>
+    <% end %>
     <% end %>
 </div>
 
