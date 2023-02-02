@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @post = Post.includes(:author, comments: [:author]).where(author: { id: params[:user_id] })
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @post }
+    end
   end
 
   def new
