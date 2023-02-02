@@ -95,3 +95,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem "active_model_serializers", "~> 0.10.13"
+
+gem "json_api", "~> 1.0"
