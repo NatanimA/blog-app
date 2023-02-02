@@ -8,5 +8,4 @@ class Api::ApiController < ActionController::API
   def set_default_format
     request.format = :json
   end
-
 end

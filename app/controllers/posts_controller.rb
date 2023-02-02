@@ -3,8 +3,8 @@ class PostsController < ApplicationController
   def index
     @post = Post.includes(:author, comments: [:author]).where(author: { id: params[:user_id] })
     respond_to do |format|
-      format.html { render :index  }
-      format.json { render :json => @post }
+      format.html { render :index }
+      format.json { render json: @post }
     end
   end
 
