@@ -98,4 +98,6 @@ end
 
 gem 'active_model_serializers', '~> 0.10.13'
 
+gem 'rswag'
+
 gem 'json_api', '~> 1.0'
