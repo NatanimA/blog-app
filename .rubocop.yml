@@ -26,7 +26,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   AllowedMethods: ['describe','context']
-  Max: 30
+  Max: 90
 
 Style/Documentation:
   Enabled: false
